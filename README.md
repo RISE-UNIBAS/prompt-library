@@ -139,7 +139,7 @@ This step-by-step guide explains how to add new prompts to this project.
      - The `prompt_id` is unique (e.g., `PROMPT-0008`).
      - Fields like `models`, `export_format`, and `last_updated` follow the correct format.
 4. Validate the JSON.
-   - Use a JSON validator (e.g., https://jsonlint.com/) to ensure the prompts.json file is correctly formatted.
+   - Use a JSON validator (e.g., https://jsonlint.com/) to ensure the `prompts.json` file is correctly formatted.
    - Common issues to check for missing commas between objects or unclosed braces or brackets.
 5. Open a pull request.
    - The repository maintainer will review your pull request.
