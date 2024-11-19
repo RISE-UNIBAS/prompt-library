@@ -77,7 +77,7 @@ function filterPrompts() {
     prompt.title.toLowerCase().includes(query) ||
     prompt.description.toLowerCase().includes(query) ||
     prompt.category.toLowerCase().includes(query) ||
-    prompt.tags.some(tag => tag.toLowerCase().includes(query)) ||
+    prompt.models.some(model => model.toLowerCase().includes(query)) ||
     prompt.author.toLowerCase().includes(query) ||
     prompt.prompt_text.toLowerCase().includes(query) ||
     prompt.expected_output.toLowerCase().includes(query) ||
