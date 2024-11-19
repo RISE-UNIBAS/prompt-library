@@ -1,0 +1,67 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333; /* Dark gray text for readability */
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+input#search {
+  display: block;
+  margin: 20px auto;
+  padding: 12px;
+  width: 50%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+input#search:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left; /* Align content to the left */
+}
+
+table th {
+  background-color: #007BFF; /* Header background color */
+  color: #fff; /* White text for headers */
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternating row color */
+}
+
+table tr:hover {
+  background-color: #e6f7ff; /* Light blue hover effect */
+}
+
+table td {
+  vertical-align: top;
+}
+
+table th:first-child, table td:first-child {
+  border-left: 2px solid #007BFF;
+}
+
+table th:last-child, table td:last-child {
+  border-right: 2px solid #007BFF;
+}

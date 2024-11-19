@@ -1,0 +1,20 @@
+[
+  {
+    "prompt_id": "PROMPT-0001",
+    "title": "Creative Writing Starter",
+    "description": "Generate an engaging opening line for a short story.",
+    "category": "Creative Writing",
+    "tags": ["story", "writing", "creative"],
+    "author": "Maxim",
+    "last_updated": "2024-11-19"
+  },
+  {
+    "prompt_id": "PROMPT-0002",
+    "title": "Python Debugging Tips",
+    "description": "Suggestions for debugging common Python issues.",
+    "category": "Programming",
+    "tags": ["Python", "debug"],
+    "author": "Jane Doe",
+    "last_updated": "2024-11-15"
+  }
+]
