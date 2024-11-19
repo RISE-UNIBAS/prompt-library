@@ -2,6 +2,9 @@
 
 A dynamic and searchable library of prompts designed for a variety of academic use cases, including structured information extraction, programming, research article indexing, and more. This project provides a web-based interface to view, sort, and filter prompts, along with documentation for easy integration and use.
 
+> [!CAUTION]
+> This is a mock up for testing and not an actual prompt library!
+
 ## Creator
 
 This dataset was created by the University of Basel's Research and Infrastructure Support RISE (rise@unibas.ch) in 2024. 
