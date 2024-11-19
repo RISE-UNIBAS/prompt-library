@@ -26,7 +26,6 @@ function displayTable(data) {
       <td>${prompt.models.join(', ')}</td>
       <td>${prompt.author}</td>
       <td>${prompt.prompt_text}</td>
-      <td>${prompt.expected_output}</td>
       <td>${prompt.use_case}</td>
       <td>${prompt.input_type}</td>
       <td>${prompt.output_type}</td>
@@ -80,7 +79,6 @@ function filterPrompts() {
     prompt.models.some(model => model.toLowerCase().includes(query)) ||
     prompt.author.toLowerCase().includes(query) ||
     prompt.prompt_text.toLowerCase().includes(query) ||
-    prompt.expected_output.toLowerCase().includes(query) ||
     prompt.use_case.toLowerCase().includes(query) ||
     prompt.input_type.toLowerCase().includes(query) ||
     prompt.output_type.toLowerCase().includes(query) ||
