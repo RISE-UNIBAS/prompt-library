@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prompt Library</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,17 +12,25 @@
   <table id="promptTable">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Tags</th>
-        <th>Author</th>
-        <th>Last Updated</th>
+        <th onclick="sortTable(0)">ID <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(1)">Title <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(2)">Description <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(3)">Category <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(4)">Models <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(5)">Author <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(6)">Prompt Text <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(7)">Expected Output <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(8)">Use Case <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(9)">Input Type <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(10)">Output Type <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(11)">Version Number <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(12)">Last Updated <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(13)">License <span class="sort-indicator"></span></th>
+        <th onclick="sortTable(14)">Export Format <span class="sort-indicator"></span></th>
       </tr>
     </thead>
     <tbody>
-      <!-- Rows will be dynamically added here -->
+      <!-- Rows will be dynamically populated -->
     </tbody>
   </table>
   <script src="script.js"></script>
