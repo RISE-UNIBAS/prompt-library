@@ -108,20 +108,19 @@ The `dcterms:` prefix in the JSON refers to the [DCMI Metadata Terms](https://ww
 
 ```
 {
-  "prompt_id": "PROMPT-0001",
-  "title": "Creative Writing Starter",
-  "description": "Generate an engaging opening line for a short story.",
-  "category": "Creative Writing",
-  "models": ["story", "writing", "creative"],
-  "author": "Hans Müller",
+  "dcterms:identifier": "PROMPT-0001",
+  "dcterms:title": "Creative Writing Starter",
+  "dcterms:description": "Generate an engaging opening line for a short story. Expected output: A single sentence that hooks the reader.",
+  "dcterms:subject": "Creative Writing",
+  "dcterms:relation": ["gpt-3.5", "gpt-4"],
+  "dcterms:creator": "Maxim",
   "prompt_text": "Write a compelling opening line for a short story.",
-  "expected_output": "A single sentence that hooks the reader.",
-  "use_case": "Storytelling",
+  "dcterms:type": "Storytelling",
   "input_type": "Text",
   "output_type": "Narrative",
-  "version_number": "v1.0",
-  "last_updated": "2024-11-19",
-  "license": "Creative Commons",
+  "dcterms:hasVersion": "v1.0",
+  "dcterms:modified": "2024-11-20",
+  "dcterms:rights": "Creative Commons",
   "export_format": ["JSON", "YAML"]
 }
 ```
