@@ -1,6 +1,6 @@
 # prompt-library
 
-A dynamic and searchable library of prompts designed for a variety of academic use cases, including structured information extraction, programming, research article indexing, and more. This project provides a web-based interface to view, sort, and filter prompts, along with documentation for easy integration and use.
+A dynamic and searchable library of prompts designed for a variety of academic use cases, including structured information extraction, programming, research article indexing, and more. This project uses GitHub pages to provide a [web-based interface to view, sort, and filter prompts](https://rise-unibas.github.io/prompt-library/), along with documentation for easy integration and use.
 
 > [!CAUTION]
 > This is a mock up for testing and not an actual prompt library!
@@ -133,7 +133,7 @@ Each prompt in the library is defined as a JSON object with the following fields
 
 ## Adding prompts
 
-This step-by-step guide explains how to add new prompts or update existing ones.
+This step-by-step guide explains how to add new prompts to this project.
 
 1. Clone this repo.
 2. Open the `prompts.json` file in a code or text editor.
