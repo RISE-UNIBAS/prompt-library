@@ -14,6 +14,14 @@ async function fetchPrompts() {
   }
 }
 
+// Helper function to make URLs clickable
+function makeClickable(url) {
+  if (url && url.startsWith('http')) {
+    return `<a href="${url}" target="_blank">${url}</a>`;
+  }
+  return url || '';
+}
+
 // Render the prompts in a table
 function displayTable(data) {
   const tableBody = document.querySelector('#promptTable tbody');
@@ -28,17 +36,25 @@ function displayTable(data) {
       <td>${prompt["dcterms:relation"].join(', ')}</td>
       <td>${prompt["dcterms:creator"]}</td>
       <td>${prompt.prompt_text}</td>
+      <td>${makeClickable(prompt["dcterms:hasPart"])}</td>
       <td>${prompt["dcterms:type"]}</td>
-      <td>${prompt.input_type}</td>
-      <td>${prompt.output_type}</td>
+      <td>${prompt.input_example}</td>
+      <td>${makeClickable(prompt.output_example)}</td>
       <td>${prompt["dcterms:hasVersion"]}</td>
       <td>${prompt["dcterms:modified"]}</td>
       <td>${prompt["dcterms:rights"]}</td>
-      <td>${prompt.export_format.join(', ')}</td>
+      <td>${makeClickable(prompt["dcterms:isPartOf"])}</td>
     `;
+    row.addEventListener('click', () => toggleRowExpansion(row)); // Add click event to toggle expansion
     tableBody.appendChild(row);
   });
 }
+
+function toggleRowExpansion(row) {
+  const cells = row.querySelectorAll('td');
+  cells.forEach(cell => cell.classList.toggle('expanded'));
+}
+
 
 // Sort the table based on column index
 function sortTable(columnIndex) {
@@ -83,16 +99,17 @@ function filterPrompts() {
       (prompt["dcterms:title"]?.toLowerCase() || '').includes(query) ||
       (prompt["dcterms:description"]?.toLowerCase() || '').includes(query) ||
       (prompt["dcterms:subject"]?.toLowerCase() || '').includes(query) ||
+      prompt["dcterms:relation"].some(model => model.toLowerCase().includes(query)) ||
       (prompt["dcterms:creator"]?.toLowerCase() || '').includes(query) ||
       (prompt.prompt_text?.toLowerCase() || '').includes(query) ||
-      (prompt.input_type?.toLowerCase() || '').includes(query) ||
-      (prompt.output_type?.toLowerCase() || '').includes(query) ||
+      (prompt["dcterms:hasPart"]?.toLowerCase() || '').includes(query) ||
       (prompt["dcterms:type"]?.toLowerCase() || '').includes(query) ||
+      (prompt.input_example?.toLowerCase() || '').includes(query) ||
+      (prompt.output_example?.toLowerCase() || '').includes(query) ||
       (prompt["dcterms:hasVersion"]?.toLowerCase() || '').includes(query) ||
       (prompt["dcterms:modified"]?.toLowerCase() || '').includes(query) ||
       (prompt["dcterms:rights"]?.toLowerCase() || '').includes(query) ||
-      prompt["dcterms:relation"].some(model => model.toLowerCase().includes(query)) ||
-      prompt.export_format.some(format => format.toLowerCase().includes(query))
+      (prompt["dcterms:isPartOf"]?.toLowerCase() || '').includes(query)
     );
   });
 

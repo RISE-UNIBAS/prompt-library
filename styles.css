@@ -37,7 +37,8 @@ table {
 table th, table td {
   border: 1px solid #ddd;
   padding: 12px 15px;
-  text-align: left;
+  text-align: left; /* Align text to the left */
+  vertical-align: top; /* Align content to the top of each cell */
 }
 
 table th {
@@ -67,4 +68,18 @@ th.sorted-asc .sort-indicator::after {
 
 th.sorted-desc .sort-indicator::after {
   content: "▼";
+}
+
+table td {
+  max-height: 50px; /* Limit row height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevent wrapping */
+  cursor: pointer; /* Indicate the row is clickable */
+}
+
+table td.expanded {
+  white-space: normal; /* Allow content to wrap */
+  max-height: none; /* Remove height limitation */
+  overflow: visible; /* Show all content */
 }
